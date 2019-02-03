@@ -124,7 +124,7 @@ module ::Middleman
   #
     def script_for(glob, path, encrypted)
       libs = %w( jquery.js jquery.cookie.js gibberish.js )
-      cdn = 'http://ahoward.github.io/middleman-gibberish/assets/'
+      cdn = 'https://ahoward.github.io/middleman-gibberish/assets/'
 
       scripts =
         libs.map do |lib|
@@ -284,7 +284,9 @@ module ::Middleman
                   </div>
                 </div>
               </div>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js" integrity="sha256-YCbKJH6u4siPpUlk130udu/JepdKVpXjdEyzje+z1pE=" crossorigin="anonymous"></script>
               <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
             </body>
 
           </html>
