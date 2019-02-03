@@ -229,6 +229,10 @@ module ::Middleman
                     transform: translate(-2px, -2px);
                 }
 
+                input { 
+                  margin-bottom:10px;
+                }
+
               </style>
 
               </head>
@@ -263,14 +267,17 @@ module ::Middleman
                     <div class="card text-center">
                       <div class='gibberish'>
                         <div class='card-header gibberish-instructions'>
-                          Entrez vos identifiants et appuyez sur &lt;ENTRÉE&gt;
+                          Entrez vos identifiants
                         </div>
+                        <div class="card-body">
                         <form>
                           <input type="email" id="email" placeholder="Votre e-mail" class="form-control">
                           <input placeholder="Votre mot de passe" id='gibberish-password' name='gibberish-password' type='password' class='gibberish-password form-control'/>
+                        </div>
+                          <div class="card-footer">
                           <input type="submit" id="gibberish-submit" name="gibberish-submit" class="btn btn-primary gibberish-submit">
+                          <div class='gibberish-message'></div>
                         </form>
-                        <div class='gibberish-message'>
                         </div>
                       </div>
                     </div>
