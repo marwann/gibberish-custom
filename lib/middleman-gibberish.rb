@@ -156,7 +156,6 @@ module ::Middleman
 
               <style>
                 .gibberish {
-                  margin: auto;
                   color: #999;
                   text-align: center;
                 }
@@ -260,16 +259,17 @@ module ::Middleman
 
               <div class="container">
                 <div class="row">
-                  <div class="col-lg-8 col-lg-offset-2">
+                  <div class="col-8 offset-2">
                     <div class="card text-center">
                       <div class='gibberish'>
                         <div class='card-header gibberish-instructions'>
                           Entrez vos identifiants et appuyez sur &lt;ENTRÉE&gt;
                         </div>
-
-                        <input type="email" id="email">
-                        <input id='gibberish-password' name='gibberish-password' type='password' class='gibberish-password'/>
-                        <input type="submit" class="btn btn-primary">
+                        <form>
+                          <input type="email" id="email" placeholder="Votre e-mail" class="form-control">
+                          <input placeholder="Votre mot de passe" id='gibberish-password' name='gibberish-password' type='password' class='gibberish-password form-control'/>
+                          <input type="submit" id="gibberish-submit" name="gibberish-submit" class="btn btn-primary gibberish-submit">
+                        </form>
                         <div class='gibberish-message'>
                         </div>
                       </div>
@@ -292,6 +292,7 @@ module ::Middleman
             jQuery(function(){
               var password = jQuery('.gibberish-password');
               var message  = jQuery('.gibberish-message');
+              var formsubmit = jQuery('.gibberish-submit');
 
               password.focus();
               message.html('');
@@ -337,6 +338,21 @@ module ::Middleman
                 return(false);
               });
 
+              formsubmit.submit(function(e){
+                var code = e.which;
+                e.preventDefault();
+
+                if(code==13){
+                  var _password = password.val();
+                  if(!decrypt(_password)){
+                    message.html("Mauvais mot de passe, veuillez réessayer.");
+                  }
+                } else {
+                  message.html("");
+                }
+
+                return(false);
+              });
 
               var _password = jQuery.cookie(cookie);
               decrypt(_password);
