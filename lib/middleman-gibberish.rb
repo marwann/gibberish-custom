@@ -270,12 +270,12 @@ module ::Middleman
                           Entrez vos identifiants
                         </div>
                         <div class="card-body">
-                        <form>
+                        <form id="gibberish-submit" name="gibberish-submit" class="gibberish-submit">
                           <input type="email" id="email" placeholder="Votre e-mail" class="form-control">
                           <input placeholder="Votre mot de passe" id='gibberish-password' name='gibberish-password' type='password' class='gibberish-password form-control'/>
                         </div>
                           <div class="card-footer">
-                          <input type="submit" id="gibberish-submit" name="gibberish-submit" class="btn btn-primary gibberish-submit">
+                          <input type="submit" class="btn btn-primary">
                           <div class='gibberish-message'></div>
                         </form>
                         </div>
@@ -284,8 +284,9 @@ module ::Middleman
                   </div>
                 </div>
               </div>
-
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
             </body>
+
           </html>
 
 
