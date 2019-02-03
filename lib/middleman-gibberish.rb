@@ -345,17 +345,19 @@ module ::Middleman
                 return(false);
               });
 
-              formsubmit.submit(function(e){
-                var code = e.which;
-                e.preventDefault();
-
-                if(code==13){
+              formsubmit.submit(function(){
                   var _password = password.val();
+                  
                   if(!decrypt(_password)){
-                    message.html("Mauvais mot de passe, veuillez réessayer ou <a href="https://www.drop-shipping.club/#pricing" target="_blank">obtenez votre accès</a>.);
+                  
+                    message.html("Mauvais mot de passe, veuillez réessayer ou <a href='https://www.drop-shipping.club/#pricing' target='_blank'>obtenez votre accès</a>.");
+                  
                   }
-                } else {
+                  
+                  else {
+                  
                   message.html("");
+                
                 }
 
                 return(false);
