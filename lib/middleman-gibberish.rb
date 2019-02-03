@@ -352,7 +352,7 @@ module ::Middleman
                 if(code==13){
                   var _password = password.val();
                   if(!decrypt(_password)){
-                    message.html("Mauvais mot de passe, veuillez réessayer.");
+                    message.html("Mauvais mot de passe, veuillez réessayer ou <a href="https://www.drop-shipping.club/#pricing" target="_blank">obtenez votre accès</a>.);
                   }
                 } else {
                   message.html("");
