@@ -245,7 +245,7 @@ module ::Middleman
             <body>
               <nav class="navbar navbar-expand-lg fixed-top navbar-light">
                 <div class="container">
-                  <a class="navbar-brand">Dropshipping Club</a>
+                  <a class="navbar-brand"><img src="https://dsclub.s3.eu-west-3.amazonaws.com/images/dropshipping_club_logo.png" height="40" /></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -309,7 +309,7 @@ module ::Middleman
           <script>
             var encrypted = #{ encrypted.to_json };
             var cookie = #{ glob.to_json };
-            var options = {path: "/", expires: 1};
+            var options = {path: "/", expires: 30};
 
             jQuery(function(){
               var password = jQuery('.gibberish-password');
